@@ -288,14 +288,10 @@ public sealed class RadarControl : MapGridControl
 
                 if (!ShowIFFShuttles)
                 {
-                    if (color == new Color
+                    if (iff != null && (iff.Flags & IFFFlags.IsPlayerShuttle) != 0x0)
                     {
-                        R = 10,
-                        G = 50,
-                        B = 100,
-                        A = 100
-                    })
                         label.Visible = false;
+                    }
                     else
                         label.Visible = true;
                 }

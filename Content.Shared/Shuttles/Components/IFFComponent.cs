@@ -38,13 +38,18 @@ public enum IFFFlags : byte
     /// <summary>
     /// Should the label for this grid be hidden at all ranges.
     /// </summary>
-    HideLabel,
+    HideLabel = 2,
 
     /// <summary>
     /// Should the grid hide entirely (AKA full stealth).
     /// Will also hide the label if that is not set.
     /// </summary>
-    Hide,
+    Hide = 4,
+
+    /// <summary>
+    /// Is this a player shuttle
+    /// </summary>
+    IsPlayerShuttle = 8,
 
     // TODO: Need one that hides its outline, just replace it with a bunch of triangles or lines or something.
 }
